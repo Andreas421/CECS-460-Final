@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="bram_all_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="bram_all_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="61.351 ns"></ZoomEndTime>
+      <Cursor1Time time="7.824 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="169"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/bram_all_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bram_all_tb/input_we" type="logic">
+      <obj_property name="ElementShortName">input_we</obj_property>
+      <obj_property name="ObjectShortName">input_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bram_all_tb/input_addr" type="array">
+      <obj_property name="ElementShortName">input_addr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">input_addr[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bram_all_tb/input_din" type="array">
+      <obj_property name="ElementShortName">input_din[7:0]</obj_property>
+      <obj_property name="ObjectShortName">input_din[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bram_all_tb/input_dout" type="array">
+      <obj_property name="ElementShortName">input_dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">input_dout[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bram_all_tb/weight_we" type="logic">
+      <obj_property name="ElementShortName">weight_we</obj_property>
+      <obj_property name="ObjectShortName">weight_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bram_all_tb/weight_addr" type="array">
+      <obj_property name="ElementShortName">weight_addr[11:0]</obj_property>
+      <obj_property name="ObjectShortName">weight_addr[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bram_all_tb/weight_din" type="array">
+      <obj_property name="ElementShortName">weight_din[7:0]</obj_property>
+      <obj_property name="ObjectShortName">weight_din[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bram_all_tb/weight_dout" type="array">
+      <obj_property name="ElementShortName">weight_dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">weight_dout[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bram_all_tb/output_we" type="logic">
+      <obj_property name="ElementShortName">output_we</obj_property>
+      <obj_property name="ObjectShortName">output_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bram_all_tb/output_addr" type="array">
+      <obj_property name="ElementShortName">output_addr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">output_addr[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bram_all_tb/output_din" type="array">
+      <obj_property name="ElementShortName">output_din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_din[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bram_all_tb/output_dout" type="array">
+      <obj_property name="ElementShortName">output_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_dout[31:0]</obj_property>
+   </wvobject>
+</wave_config>
