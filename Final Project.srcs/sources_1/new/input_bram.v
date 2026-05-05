@@ -12,9 +12,13 @@ module input_bram(
 
 (* ram_style = "block" *)
 reg[7:0] bram[0:63];
-initial begin
-//value assignments
+reg[7:0] dout_reg;
 
+assign dout = dout_reg;
+always @(posedge clk) begin
+    if(we)
+        bram[addr] <= din;
+    dout_reg <= bram[addr];
 end
 
 endmodule

@@ -11,7 +11,7 @@ module output_bram(
 
 (* ram_style = "block" *)
 reg[31:0] bram[0:63];
-reg[7:0] dout_reg;
+reg[31:0] dout_reg; //32 bit output length
 
 assign dout = dout_reg;
 
