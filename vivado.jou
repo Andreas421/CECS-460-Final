@@ -13,3 +13,50 @@
 start_gui
 open_project {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.xpr}
 update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.srcs/sim_1/new/fsm_ctrl_tb.v} w ]
+add_files -fileset sim_1 {{C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.srcs/sim_1/new/fsm_ctrl_tb.v}}
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top fsm_ctrl_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}
+source fsm_ctrl_tb.tcl
+relaunch_sim
+save_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+save_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}
+source fsm_ctrl_tb.tcl
+save_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+save_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+save_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+save_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}
+source fsm_ctrl_tb.tcl
+close_sim
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}
+source fsm_ctrl_tb.tcl
+close_sim
+run 3000ns
+launch_simulation
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}
+source fsm_ctrl_tb.tcl
+run 3000ns

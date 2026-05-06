@@ -32,3 +32,1321 @@ INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
 open_project: Time (s): cpu = 00:00:31 ; elapsed = 00:00:14 . Memory (MB): peak = 1825.324 ; gain = 270.324
 update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.srcs/sim_1/new/fsm_ctrl_tb.v} w ]
+add_files -fileset sim_1 {{C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.srcs/sim_1/new/fsm_ctrl_tb.v}}
+update_compile_order -fileset sim_1
+set_property top fsm_ctrl_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fsm_ctrl_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fsm_ctrl_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fsm_ctrl_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.srcs/sources_1/new/fsm_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.srcs/sim_1/new/fsm_ctrl_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm_ctrl_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fsm_ctrl_tb_behav xil_defaultlib.fsm_ctrl_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fsm_ctrl_tb_behav xil_defaultlib.fsm_ctrl_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fsm_ctrl
+Compiling module xil_defaultlib.fsm_ctrl_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fsm_ctrl_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1871.457 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fsm_ctrl_tb_behav -key {Behavioral:sim_1:Functional:fsm_ctrl_tb} -tclbatch {fsm_ctrl_tb.tcl} -view {{C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}} -view {{C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+WARNING: Simulation object /mac_array_tb/clk was not found in the design.
+WARNING: Simulation object /mac_array_tb/rst_n was not found in the design.
+WARNING: Simulation object /mac_array_tb/clear_acc was not found in the design.
+WARNING: Simulation object /mac_array_tb/en was not found in the design.
+WARNING: Simulation object /mac_array_tb/input_data was not found in the design.
+WARNING: Simulation object /mac_array_tb/weight_data was not found in the design.
+WARNING: Simulation object /mac_array_tb/acc_out was not found in the design.
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}
+WARNING: Simulation object /bram_all_tb/clk was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_dout was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_dout was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_dout was not found in the design.
+source fsm_ctrl_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+t=0 state=0 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=35000 state=1 row=0 col=0 in_addr=0 w_addr=0 mac_clr=1 mac_en=0 out_we=0 out_addr=0 done=0
+t=45000 state=2 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=55000 state=3 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=65000 state=4 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=75000 state=2 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=85000 state=3 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=95000 state=4 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=105000 state=2 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=115000 state=3 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=125000 state=4 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=135000 state=2 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=145000 state=3 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=155000 state=4 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=165000 state=2 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=175000 state=3 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=185000 state=4 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=195000 state=2 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=205000 state=3 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=215000 state=4 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=225000 state=2 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=235000 state=3 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=245000 state=4 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=255000 state=2 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=265000 state=3 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=275000 state=4 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=285000 state=2 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=295000 state=3 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=305000 state=4 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=315000 state=2 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=325000 state=3 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=335000 state=4 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=345000 state=2 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=355000 state=3 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=365000 state=4 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=375000 state=2 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=385000 state=3 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=395000 state=4 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=405000 state=2 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=415000 state=3 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=425000 state=4 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=435000 state=2 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=445000 state=3 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=455000 state=4 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=465000 state=2 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=475000 state=3 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=485000 state=4 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=495000 state=2 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=505000 state=3 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=515000 state=4 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=525000 state=2 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=535000 state=3 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=545000 state=4 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=555000 state=2 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=565000 state=3 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=575000 state=4 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=585000 state=2 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=595000 state=3 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=605000 state=4 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=615000 state=2 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=625000 state=3 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=635000 state=4 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=645000 state=2 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=655000 state=3 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=665000 state=4 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=675000 state=2 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=685000 state=3 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=695000 state=4 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=705000 state=2 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=715000 state=3 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=725000 state=4 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=735000 state=2 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=745000 state=3 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=755000 state=4 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=765000 state=2 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=775000 state=3 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=785000 state=4 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=795000 state=2 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=805000 state=3 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=815000 state=4 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=825000 state=2 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=835000 state=3 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=845000 state=4 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=855000 state=2 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=865000 state=3 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=875000 state=4 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=885000 state=2 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=895000 state=3 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=905000 state=4 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=915000 state=2 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=925000 state=3 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=935000 state=4 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=945000 state=2 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=955000 state=3 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=965000 state=4 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=975000 state=2 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=985000 state=3 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=995000 state=4 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fsm_ctrl_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1879.520 ; gain = 8.062
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fsm_ctrl_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fsm_ctrl_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fsm_ctrl_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fsm_ctrl_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fsm_ctrl_tb_behav xil_defaultlib.fsm_ctrl_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fsm_ctrl_tb_behav xil_defaultlib.fsm_ctrl_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+t=0 state=0 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=35000 state=1 row=0 col=0 in_addr=0 w_addr=0 mac_clr=1 mac_en=0 out_we=0 out_addr=0 done=0
+t=45000 state=2 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=55000 state=3 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=65000 state=4 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=75000 state=2 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=85000 state=3 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=95000 state=4 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=105000 state=2 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=115000 state=3 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=125000 state=4 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=135000 state=2 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=145000 state=3 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=155000 state=4 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=165000 state=2 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=175000 state=3 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=185000 state=4 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=195000 state=2 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=205000 state=3 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=215000 state=4 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=225000 state=2 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=235000 state=3 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=245000 state=4 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=255000 state=2 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=265000 state=3 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=275000 state=4 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=285000 state=2 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=295000 state=3 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=305000 state=4 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=315000 state=2 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=325000 state=3 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=335000 state=4 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=345000 state=2 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=355000 state=3 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=365000 state=4 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=375000 state=2 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=385000 state=3 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=395000 state=4 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=405000 state=2 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=415000 state=3 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=425000 state=4 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=435000 state=2 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=445000 state=3 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=455000 state=4 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=465000 state=2 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=475000 state=3 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=485000 state=4 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=495000 state=2 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=505000 state=3 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=515000 state=4 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=525000 state=2 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=535000 state=3 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=545000 state=4 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=555000 state=2 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=565000 state=3 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=575000 state=4 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=585000 state=2 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=595000 state=3 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=605000 state=4 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=615000 state=2 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=625000 state=3 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=635000 state=4 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=645000 state=2 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=655000 state=3 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=665000 state=4 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=675000 state=2 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=685000 state=3 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=695000 state=4 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=705000 state=2 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=715000 state=3 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=725000 state=4 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=735000 state=2 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=745000 state=3 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=755000 state=4 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=765000 state=2 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=775000 state=3 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=785000 state=4 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=795000 state=2 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=805000 state=3 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=815000 state=4 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=825000 state=2 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=835000 state=3 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=845000 state=4 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=855000 state=2 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=865000 state=3 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=875000 state=4 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=885000 state=2 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=895000 state=3 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=905000 state=4 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=915000 state=2 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=925000 state=3 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=935000 state=4 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=945000 state=2 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=955000 state=3 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=965000 state=4 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=975000 state=2 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=985000 state=3 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=995000 state=4 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+save_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+save_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fsm_ctrl_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fsm_ctrl_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fsm_ctrl_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.srcs/sources_1/new/fsm_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.srcs/sim_1/new/fsm_ctrl_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm_ctrl_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fsm_ctrl_tb_behav xil_defaultlib.fsm_ctrl_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fsm_ctrl_tb_behav xil_defaultlib.fsm_ctrl_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fsm_ctrl
+Compiling module xil_defaultlib.fsm_ctrl_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fsm_ctrl_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fsm_ctrl_tb_behav -key {Behavioral:sim_1:Functional:fsm_ctrl_tb} -tclbatch {fsm_ctrl_tb.tcl} -view {{C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}} -view {{C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}
+WARNING: Simulation object /bram_all_tb/clk was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_dout was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_dout was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_dout was not found in the design.
+source fsm_ctrl_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+t=0 state=0 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=35000 state=1 row=0 col=0 in_addr=0 w_addr=0 mac_clr=1 mac_en=0 out_we=0 out_addr=0 done=0
+t=45000 state=2 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=55000 state=3 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=65000 state=4 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=75000 state=2 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=85000 state=3 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=95000 state=4 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=105000 state=2 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=115000 state=3 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=125000 state=4 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=135000 state=2 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=145000 state=3 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=155000 state=4 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=165000 state=2 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=175000 state=3 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=185000 state=4 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=195000 state=2 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=205000 state=3 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=215000 state=4 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=225000 state=2 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=235000 state=3 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=245000 state=4 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=255000 state=2 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=265000 state=3 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=275000 state=4 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=285000 state=2 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=295000 state=3 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=305000 state=4 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=315000 state=2 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=325000 state=3 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=335000 state=4 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=345000 state=2 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=355000 state=3 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=365000 state=4 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=375000 state=2 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=385000 state=3 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=395000 state=4 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=405000 state=2 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=415000 state=3 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=425000 state=4 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=435000 state=2 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=445000 state=3 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=455000 state=4 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=465000 state=2 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=475000 state=3 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=485000 state=4 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=495000 state=2 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=505000 state=3 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=515000 state=4 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=525000 state=2 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=535000 state=3 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=545000 state=4 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=555000 state=2 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=565000 state=3 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=575000 state=4 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=585000 state=2 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=595000 state=3 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=605000 state=4 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=615000 state=2 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=625000 state=3 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=635000 state=4 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=645000 state=2 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=655000 state=3 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=665000 state=4 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=675000 state=2 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=685000 state=3 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=695000 state=4 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=705000 state=2 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=715000 state=3 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=725000 state=4 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=735000 state=2 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=745000 state=3 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=755000 state=4 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=765000 state=2 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=775000 state=3 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=785000 state=4 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=795000 state=2 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=805000 state=3 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=815000 state=4 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=825000 state=2 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=835000 state=3 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=845000 state=4 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=855000 state=2 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=865000 state=3 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=875000 state=4 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=885000 state=2 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=895000 state=3 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=905000 state=4 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=915000 state=2 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=925000 state=3 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=935000 state=4 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=945000 state=2 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=955000 state=3 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=965000 state=4 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=975000 state=2 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=985000 state=3 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=995000 state=4 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fsm_ctrl_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1903.242 ; gain = 0.000
+save_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+save_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+save_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+save_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fsm_ctrl_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fsm_ctrl_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fsm_ctrl_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.srcs/sources_1/new/fsm_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.srcs/sim_1/new/fsm_ctrl_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm_ctrl_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fsm_ctrl_tb_behav xil_defaultlib.fsm_ctrl_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fsm_ctrl_tb_behav xil_defaultlib.fsm_ctrl_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fsm_ctrl
+Compiling module xil_defaultlib.fsm_ctrl_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fsm_ctrl_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fsm_ctrl_tb_behav -key {Behavioral:sim_1:Functional:fsm_ctrl_tb} -tclbatch {fsm_ctrl_tb.tcl} -view {{C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}} -view {{C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}
+WARNING: Simulation object /bram_all_tb/clk was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_dout was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_dout was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_dout was not found in the design.
+source fsm_ctrl_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+t=0 state=0 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=35000 state=1 row=0 col=0 in_addr=0 w_addr=0 mac_clr=1 mac_en=0 out_we=0 out_addr=0 done=0
+t=45000 state=2 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=55000 state=3 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=65000 state=4 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=75000 state=2 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=85000 state=3 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=95000 state=4 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=105000 state=2 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=115000 state=3 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=125000 state=4 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=135000 state=2 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=145000 state=3 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=155000 state=4 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=165000 state=2 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=175000 state=3 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=185000 state=4 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=195000 state=2 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=205000 state=3 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=215000 state=4 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=225000 state=2 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=235000 state=3 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=245000 state=4 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=255000 state=2 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=265000 state=3 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=275000 state=4 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=285000 state=2 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=295000 state=3 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=305000 state=4 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=315000 state=2 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=325000 state=3 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=335000 state=4 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=345000 state=2 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=355000 state=3 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=365000 state=4 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=375000 state=2 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=385000 state=3 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=395000 state=4 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=405000 state=2 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=415000 state=3 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=425000 state=4 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=435000 state=2 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=445000 state=3 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=455000 state=4 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=465000 state=2 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=475000 state=3 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=485000 state=4 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=495000 state=2 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=505000 state=3 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=515000 state=4 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=525000 state=2 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=535000 state=3 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=545000 state=4 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=555000 state=2 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=565000 state=3 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=575000 state=4 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=585000 state=2 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=595000 state=3 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=605000 state=4 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=615000 state=2 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=625000 state=3 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=635000 state=4 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=645000 state=2 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=655000 state=3 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=665000 state=4 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=675000 state=2 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=685000 state=3 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=695000 state=4 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=705000 state=2 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=715000 state=3 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=725000 state=4 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=735000 state=2 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=745000 state=3 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=755000 state=4 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=765000 state=2 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=775000 state=3 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=785000 state=4 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=795000 state=2 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=805000 state=3 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=815000 state=4 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=825000 state=2 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=835000 state=3 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=845000 state=4 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=855000 state=2 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=865000 state=3 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=875000 state=4 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=885000 state=2 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=895000 state=3 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=905000 state=4 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=915000 state=2 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=925000 state=3 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=935000 state=4 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=945000 state=2 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=955000 state=3 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=965000 state=4 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=975000 state=2 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=985000 state=3 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=995000 state=4 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fsm_ctrl_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1912.555 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fsm_ctrl_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fsm_ctrl_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fsm_ctrl_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.srcs/sources_1/new/fsm_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.srcs/sim_1/new/fsm_ctrl_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm_ctrl_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fsm_ctrl_tb_behav xil_defaultlib.fsm_ctrl_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fsm_ctrl_tb_behav xil_defaultlib.fsm_ctrl_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fsm_ctrl
+Compiling module xil_defaultlib.fsm_ctrl_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fsm_ctrl_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fsm_ctrl_tb_behav -key {Behavioral:sim_1:Functional:fsm_ctrl_tb} -tclbatch {fsm_ctrl_tb.tcl} -view {{C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}} -view {{C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}
+WARNING: Simulation object /bram_all_tb/clk was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_dout was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_dout was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_dout was not found in the design.
+source fsm_ctrl_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+t=0 state=0 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=35000 state=1 row=0 col=0 in_addr=0 w_addr=0 mac_clr=1 mac_en=0 out_we=0 out_addr=0 done=0
+t=45000 state=2 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=55000 state=3 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=65000 state=4 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=75000 state=2 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=85000 state=3 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=95000 state=4 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=105000 state=2 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=115000 state=3 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=125000 state=4 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=135000 state=2 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=145000 state=3 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=155000 state=4 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=165000 state=2 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=175000 state=3 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=185000 state=4 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=195000 state=2 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=205000 state=3 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=215000 state=4 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=225000 state=2 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=235000 state=3 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=245000 state=4 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=255000 state=2 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=265000 state=3 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=275000 state=4 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=285000 state=2 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=295000 state=3 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=305000 state=4 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=315000 state=2 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=325000 state=3 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=335000 state=4 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=345000 state=2 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=355000 state=3 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=365000 state=4 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=375000 state=2 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=385000 state=3 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=395000 state=4 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=405000 state=2 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=415000 state=3 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=425000 state=4 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=435000 state=2 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=445000 state=3 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=455000 state=4 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=465000 state=2 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=475000 state=3 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=485000 state=4 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=495000 state=2 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=505000 state=3 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=515000 state=4 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=525000 state=2 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=535000 state=3 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=545000 state=4 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=555000 state=2 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=565000 state=3 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=575000 state=4 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=585000 state=2 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=595000 state=3 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=605000 state=4 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=615000 state=2 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=625000 state=3 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=635000 state=4 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=645000 state=2 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=655000 state=3 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=665000 state=4 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=675000 state=2 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=685000 state=3 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=695000 state=4 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=705000 state=2 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=715000 state=3 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=725000 state=4 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=735000 state=2 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=745000 state=3 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=755000 state=4 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=765000 state=2 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=775000 state=3 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=785000 state=4 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=795000 state=2 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=805000 state=3 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=815000 state=4 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=825000 state=2 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=835000 state=3 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=845000 state=4 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=855000 state=2 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=865000 state=3 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=875000 state=4 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=885000 state=2 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=895000 state=3 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=905000 state=4 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=915000 state=2 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=925000 state=3 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=935000 state=4 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=945000 state=2 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=955000 state=3 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=965000 state=4 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=975000 state=2 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=985000 state=3 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=995000 state=4 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fsm_ctrl_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1914.754 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+run 3000ns
+ERROR: [Simulator 45-6] No active Vivado Simulator simulation.  To use this command you must first start a simulation using Vivado Simulator.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fsm_ctrl_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fsm_ctrl_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fsm_ctrl_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fsm_ctrl_tb_behav xil_defaultlib.fsm_ctrl_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fsm_ctrl_tb_behav xil_defaultlib.fsm_ctrl_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fsm_ctrl_tb_behav -key {Behavioral:sim_1:Functional:fsm_ctrl_tb} -tclbatch {fsm_ctrl_tb.tcl} -view {{C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}} -view {{C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/mac_array_tb_behav.wcfg}
+open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}
+WARNING: Simulation object /bram_all_tb/clk was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/input_dout was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/weight_dout was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_we was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_addr was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_din was not found in the design.
+WARNING: Simulation object /bram_all_tb/output_dout was not found in the design.
+source fsm_ctrl_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+t=0 state=0 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=35000 state=1 row=0 col=0 in_addr=0 w_addr=0 mac_clr=1 mac_en=0 out_we=0 out_addr=0 done=0
+t=45000 state=2 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=55000 state=3 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=65000 state=4 row=0 col=0 in_addr=0 w_addr=0 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=75000 state=2 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=85000 state=3 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=95000 state=4 row=0 col=1 in_addr=1 w_addr=1 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=105000 state=2 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=115000 state=3 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=125000 state=4 row=0 col=2 in_addr=2 w_addr=2 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=135000 state=2 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=145000 state=3 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=155000 state=4 row=0 col=3 in_addr=3 w_addr=3 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=165000 state=2 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=175000 state=3 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=185000 state=4 row=0 col=4 in_addr=4 w_addr=4 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=195000 state=2 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=205000 state=3 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=215000 state=4 row=0 col=5 in_addr=5 w_addr=5 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=225000 state=2 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=235000 state=3 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=245000 state=4 row=0 col=6 in_addr=6 w_addr=6 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=255000 state=2 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=265000 state=3 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=275000 state=4 row=0 col=7 in_addr=7 w_addr=7 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=285000 state=2 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=295000 state=3 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=305000 state=4 row=0 col=8 in_addr=8 w_addr=8 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=315000 state=2 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=325000 state=3 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=335000 state=4 row=0 col=9 in_addr=9 w_addr=9 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=345000 state=2 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=355000 state=3 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=365000 state=4 row=0 col=10 in_addr=10 w_addr=10 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=375000 state=2 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=385000 state=3 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=395000 state=4 row=0 col=11 in_addr=11 w_addr=11 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=405000 state=2 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=415000 state=3 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=425000 state=4 row=0 col=12 in_addr=12 w_addr=12 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=435000 state=2 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=445000 state=3 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=455000 state=4 row=0 col=13 in_addr=13 w_addr=13 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=465000 state=2 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=475000 state=3 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=485000 state=4 row=0 col=14 in_addr=14 w_addr=14 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=495000 state=2 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=505000 state=3 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=515000 state=4 row=0 col=15 in_addr=15 w_addr=15 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=525000 state=2 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=535000 state=3 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=545000 state=4 row=0 col=16 in_addr=16 w_addr=16 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=555000 state=2 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=565000 state=3 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=575000 state=4 row=0 col=17 in_addr=17 w_addr=17 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=585000 state=2 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=595000 state=3 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=605000 state=4 row=0 col=18 in_addr=18 w_addr=18 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=615000 state=2 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=625000 state=3 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=635000 state=4 row=0 col=19 in_addr=19 w_addr=19 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=645000 state=2 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=655000 state=3 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=665000 state=4 row=0 col=20 in_addr=20 w_addr=20 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=675000 state=2 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=685000 state=3 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=695000 state=4 row=0 col=21 in_addr=21 w_addr=21 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=705000 state=2 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=715000 state=3 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=725000 state=4 row=0 col=22 in_addr=22 w_addr=22 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=735000 state=2 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=745000 state=3 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=755000 state=4 row=0 col=23 in_addr=23 w_addr=23 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=765000 state=2 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=775000 state=3 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=785000 state=4 row=0 col=24 in_addr=24 w_addr=24 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=795000 state=2 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=805000 state=3 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=815000 state=4 row=0 col=25 in_addr=25 w_addr=25 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=825000 state=2 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=835000 state=3 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=845000 state=4 row=0 col=26 in_addr=26 w_addr=26 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=855000 state=2 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=865000 state=3 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=875000 state=4 row=0 col=27 in_addr=27 w_addr=27 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=885000 state=2 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=895000 state=3 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=905000 state=4 row=0 col=28 in_addr=28 w_addr=28 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=915000 state=2 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=925000 state=3 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=935000 state=4 row=0 col=29 in_addr=29 w_addr=29 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=945000 state=2 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=955000 state=3 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=965000 state=4 row=0 col=30 in_addr=30 w_addr=30 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=975000 state=2 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=985000 state=3 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=995000 state=4 row=0 col=31 in_addr=31 w_addr=31 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fsm_ctrl_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 3000ns
+t=1005000 state=2 row=0 col=32 in_addr=32 w_addr=32 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1015000 state=3 row=0 col=32 in_addr=32 w_addr=32 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1025000 state=4 row=0 col=32 in_addr=32 w_addr=32 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1035000 state=2 row=0 col=33 in_addr=33 w_addr=33 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1045000 state=3 row=0 col=33 in_addr=33 w_addr=33 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1055000 state=4 row=0 col=33 in_addr=33 w_addr=33 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1065000 state=2 row=0 col=34 in_addr=34 w_addr=34 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1075000 state=3 row=0 col=34 in_addr=34 w_addr=34 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1085000 state=4 row=0 col=34 in_addr=34 w_addr=34 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1095000 state=2 row=0 col=35 in_addr=35 w_addr=35 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1105000 state=3 row=0 col=35 in_addr=35 w_addr=35 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1115000 state=4 row=0 col=35 in_addr=35 w_addr=35 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1125000 state=2 row=0 col=36 in_addr=36 w_addr=36 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1135000 state=3 row=0 col=36 in_addr=36 w_addr=36 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1145000 state=4 row=0 col=36 in_addr=36 w_addr=36 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1155000 state=2 row=0 col=37 in_addr=37 w_addr=37 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1165000 state=3 row=0 col=37 in_addr=37 w_addr=37 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1175000 state=4 row=0 col=37 in_addr=37 w_addr=37 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1185000 state=2 row=0 col=38 in_addr=38 w_addr=38 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1195000 state=3 row=0 col=38 in_addr=38 w_addr=38 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1205000 state=4 row=0 col=38 in_addr=38 w_addr=38 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1215000 state=2 row=0 col=39 in_addr=39 w_addr=39 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1225000 state=3 row=0 col=39 in_addr=39 w_addr=39 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1235000 state=4 row=0 col=39 in_addr=39 w_addr=39 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1245000 state=2 row=0 col=40 in_addr=40 w_addr=40 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1255000 state=3 row=0 col=40 in_addr=40 w_addr=40 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1265000 state=4 row=0 col=40 in_addr=40 w_addr=40 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1275000 state=2 row=0 col=41 in_addr=41 w_addr=41 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1285000 state=3 row=0 col=41 in_addr=41 w_addr=41 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1295000 state=4 row=0 col=41 in_addr=41 w_addr=41 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1305000 state=2 row=0 col=42 in_addr=42 w_addr=42 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1315000 state=3 row=0 col=42 in_addr=42 w_addr=42 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1325000 state=4 row=0 col=42 in_addr=42 w_addr=42 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1335000 state=2 row=0 col=43 in_addr=43 w_addr=43 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1345000 state=3 row=0 col=43 in_addr=43 w_addr=43 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1355000 state=4 row=0 col=43 in_addr=43 w_addr=43 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1365000 state=2 row=0 col=44 in_addr=44 w_addr=44 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1375000 state=3 row=0 col=44 in_addr=44 w_addr=44 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1385000 state=4 row=0 col=44 in_addr=44 w_addr=44 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1395000 state=2 row=0 col=45 in_addr=45 w_addr=45 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1405000 state=3 row=0 col=45 in_addr=45 w_addr=45 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1415000 state=4 row=0 col=45 in_addr=45 w_addr=45 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1425000 state=2 row=0 col=46 in_addr=46 w_addr=46 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1435000 state=3 row=0 col=46 in_addr=46 w_addr=46 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1445000 state=4 row=0 col=46 in_addr=46 w_addr=46 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1455000 state=2 row=0 col=47 in_addr=47 w_addr=47 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1465000 state=3 row=0 col=47 in_addr=47 w_addr=47 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1475000 state=4 row=0 col=47 in_addr=47 w_addr=47 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1485000 state=2 row=0 col=48 in_addr=48 w_addr=48 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1495000 state=3 row=0 col=48 in_addr=48 w_addr=48 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1505000 state=4 row=0 col=48 in_addr=48 w_addr=48 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1515000 state=2 row=0 col=49 in_addr=49 w_addr=49 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1525000 state=3 row=0 col=49 in_addr=49 w_addr=49 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1535000 state=4 row=0 col=49 in_addr=49 w_addr=49 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1545000 state=2 row=0 col=50 in_addr=50 w_addr=50 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1555000 state=3 row=0 col=50 in_addr=50 w_addr=50 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1565000 state=4 row=0 col=50 in_addr=50 w_addr=50 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1575000 state=2 row=0 col=51 in_addr=51 w_addr=51 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1585000 state=3 row=0 col=51 in_addr=51 w_addr=51 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1595000 state=4 row=0 col=51 in_addr=51 w_addr=51 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1605000 state=2 row=0 col=52 in_addr=52 w_addr=52 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1615000 state=3 row=0 col=52 in_addr=52 w_addr=52 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1625000 state=4 row=0 col=52 in_addr=52 w_addr=52 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1635000 state=2 row=0 col=53 in_addr=53 w_addr=53 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1645000 state=3 row=0 col=53 in_addr=53 w_addr=53 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1655000 state=4 row=0 col=53 in_addr=53 w_addr=53 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1665000 state=2 row=0 col=54 in_addr=54 w_addr=54 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1675000 state=3 row=0 col=54 in_addr=54 w_addr=54 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1685000 state=4 row=0 col=54 in_addr=54 w_addr=54 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1695000 state=2 row=0 col=55 in_addr=55 w_addr=55 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1705000 state=3 row=0 col=55 in_addr=55 w_addr=55 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1715000 state=4 row=0 col=55 in_addr=55 w_addr=55 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1725000 state=2 row=0 col=56 in_addr=56 w_addr=56 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1735000 state=3 row=0 col=56 in_addr=56 w_addr=56 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1745000 state=4 row=0 col=56 in_addr=56 w_addr=56 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1755000 state=2 row=0 col=57 in_addr=57 w_addr=57 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1765000 state=3 row=0 col=57 in_addr=57 w_addr=57 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1775000 state=4 row=0 col=57 in_addr=57 w_addr=57 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1785000 state=2 row=0 col=58 in_addr=58 w_addr=58 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1795000 state=3 row=0 col=58 in_addr=58 w_addr=58 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1805000 state=4 row=0 col=58 in_addr=58 w_addr=58 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1815000 state=2 row=0 col=59 in_addr=59 w_addr=59 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1825000 state=3 row=0 col=59 in_addr=59 w_addr=59 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1835000 state=4 row=0 col=59 in_addr=59 w_addr=59 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1845000 state=2 row=0 col=60 in_addr=60 w_addr=60 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1855000 state=3 row=0 col=60 in_addr=60 w_addr=60 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1865000 state=4 row=0 col=60 in_addr=60 w_addr=60 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1875000 state=2 row=0 col=61 in_addr=61 w_addr=61 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1885000 state=3 row=0 col=61 in_addr=61 w_addr=61 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1895000 state=4 row=0 col=61 in_addr=61 w_addr=61 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1905000 state=2 row=0 col=62 in_addr=62 w_addr=62 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1915000 state=3 row=0 col=62 in_addr=62 w_addr=62 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1925000 state=4 row=0 col=62 in_addr=62 w_addr=62 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1935000 state=2 row=0 col=63 in_addr=63 w_addr=63 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1945000 state=3 row=0 col=63 in_addr=63 w_addr=63 mac_clr=0 mac_en=1 out_we=0 out_addr=0 done=0
+t=1955000 state=4 row=0 col=63 in_addr=63 w_addr=63 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1965000 state=5 row=0 col=63 in_addr=63 w_addr=63 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1975000 state=6 row=0 col=63 in_addr=63 w_addr=63 mac_clr=0 mac_en=0 out_we=1 out_addr=0 done=0
+t=1985000 state=7 row=0 col=63 in_addr=63 w_addr=63 mac_clr=0 mac_en=0 out_we=0 out_addr=0 done=0
+t=1995000 state=1 row=1 col=0 in_addr=0 w_addr=64 mac_clr=1 mac_en=0 out_we=0 out_addr=1 done=0
+t=2005000 state=2 row=1 col=0 in_addr=0 w_addr=64 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2015000 state=3 row=1 col=0 in_addr=0 w_addr=64 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2025000 state=4 row=1 col=0 in_addr=0 w_addr=64 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2035000 state=2 row=1 col=1 in_addr=1 w_addr=65 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2045000 state=3 row=1 col=1 in_addr=1 w_addr=65 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2055000 state=4 row=1 col=1 in_addr=1 w_addr=65 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2065000 state=2 row=1 col=2 in_addr=2 w_addr=66 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2075000 state=3 row=1 col=2 in_addr=2 w_addr=66 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2085000 state=4 row=1 col=2 in_addr=2 w_addr=66 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2095000 state=2 row=1 col=3 in_addr=3 w_addr=67 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2105000 state=3 row=1 col=3 in_addr=3 w_addr=67 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2115000 state=4 row=1 col=3 in_addr=3 w_addr=67 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2125000 state=2 row=1 col=4 in_addr=4 w_addr=68 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2135000 state=3 row=1 col=4 in_addr=4 w_addr=68 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2145000 state=4 row=1 col=4 in_addr=4 w_addr=68 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2155000 state=2 row=1 col=5 in_addr=5 w_addr=69 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2165000 state=3 row=1 col=5 in_addr=5 w_addr=69 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2175000 state=4 row=1 col=5 in_addr=5 w_addr=69 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2185000 state=2 row=1 col=6 in_addr=6 w_addr=70 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2195000 state=3 row=1 col=6 in_addr=6 w_addr=70 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2205000 state=4 row=1 col=6 in_addr=6 w_addr=70 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2215000 state=2 row=1 col=7 in_addr=7 w_addr=71 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2225000 state=3 row=1 col=7 in_addr=7 w_addr=71 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2235000 state=4 row=1 col=7 in_addr=7 w_addr=71 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2245000 state=2 row=1 col=8 in_addr=8 w_addr=72 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2255000 state=3 row=1 col=8 in_addr=8 w_addr=72 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2265000 state=4 row=1 col=8 in_addr=8 w_addr=72 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2275000 state=2 row=1 col=9 in_addr=9 w_addr=73 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2285000 state=3 row=1 col=9 in_addr=9 w_addr=73 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2295000 state=4 row=1 col=9 in_addr=9 w_addr=73 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2305000 state=2 row=1 col=10 in_addr=10 w_addr=74 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2315000 state=3 row=1 col=10 in_addr=10 w_addr=74 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2325000 state=4 row=1 col=10 in_addr=10 w_addr=74 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2335000 state=2 row=1 col=11 in_addr=11 w_addr=75 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2345000 state=3 row=1 col=11 in_addr=11 w_addr=75 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2355000 state=4 row=1 col=11 in_addr=11 w_addr=75 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2365000 state=2 row=1 col=12 in_addr=12 w_addr=76 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2375000 state=3 row=1 col=12 in_addr=12 w_addr=76 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2385000 state=4 row=1 col=12 in_addr=12 w_addr=76 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2395000 state=2 row=1 col=13 in_addr=13 w_addr=77 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2405000 state=3 row=1 col=13 in_addr=13 w_addr=77 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2415000 state=4 row=1 col=13 in_addr=13 w_addr=77 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2425000 state=2 row=1 col=14 in_addr=14 w_addr=78 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2435000 state=3 row=1 col=14 in_addr=14 w_addr=78 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2445000 state=4 row=1 col=14 in_addr=14 w_addr=78 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2455000 state=2 row=1 col=15 in_addr=15 w_addr=79 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2465000 state=3 row=1 col=15 in_addr=15 w_addr=79 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2475000 state=4 row=1 col=15 in_addr=15 w_addr=79 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2485000 state=2 row=1 col=16 in_addr=16 w_addr=80 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2495000 state=3 row=1 col=16 in_addr=16 w_addr=80 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2505000 state=4 row=1 col=16 in_addr=16 w_addr=80 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2515000 state=2 row=1 col=17 in_addr=17 w_addr=81 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2525000 state=3 row=1 col=17 in_addr=17 w_addr=81 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2535000 state=4 row=1 col=17 in_addr=17 w_addr=81 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2545000 state=2 row=1 col=18 in_addr=18 w_addr=82 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2555000 state=3 row=1 col=18 in_addr=18 w_addr=82 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2565000 state=4 row=1 col=18 in_addr=18 w_addr=82 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2575000 state=2 row=1 col=19 in_addr=19 w_addr=83 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2585000 state=3 row=1 col=19 in_addr=19 w_addr=83 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2595000 state=4 row=1 col=19 in_addr=19 w_addr=83 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2605000 state=2 row=1 col=20 in_addr=20 w_addr=84 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2615000 state=3 row=1 col=20 in_addr=20 w_addr=84 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2625000 state=4 row=1 col=20 in_addr=20 w_addr=84 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2635000 state=2 row=1 col=21 in_addr=21 w_addr=85 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2645000 state=3 row=1 col=21 in_addr=21 w_addr=85 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2655000 state=4 row=1 col=21 in_addr=21 w_addr=85 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2665000 state=2 row=1 col=22 in_addr=22 w_addr=86 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2675000 state=3 row=1 col=22 in_addr=22 w_addr=86 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2685000 state=4 row=1 col=22 in_addr=22 w_addr=86 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2695000 state=2 row=1 col=23 in_addr=23 w_addr=87 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2705000 state=3 row=1 col=23 in_addr=23 w_addr=87 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2715000 state=4 row=1 col=23 in_addr=23 w_addr=87 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2725000 state=2 row=1 col=24 in_addr=24 w_addr=88 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2735000 state=3 row=1 col=24 in_addr=24 w_addr=88 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2745000 state=4 row=1 col=24 in_addr=24 w_addr=88 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2755000 state=2 row=1 col=25 in_addr=25 w_addr=89 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2765000 state=3 row=1 col=25 in_addr=25 w_addr=89 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2775000 state=4 row=1 col=25 in_addr=25 w_addr=89 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2785000 state=2 row=1 col=26 in_addr=26 w_addr=90 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2795000 state=3 row=1 col=26 in_addr=26 w_addr=90 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2805000 state=4 row=1 col=26 in_addr=26 w_addr=90 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2815000 state=2 row=1 col=27 in_addr=27 w_addr=91 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2825000 state=3 row=1 col=27 in_addr=27 w_addr=91 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2835000 state=4 row=1 col=27 in_addr=27 w_addr=91 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2845000 state=2 row=1 col=28 in_addr=28 w_addr=92 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2855000 state=3 row=1 col=28 in_addr=28 w_addr=92 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2865000 state=4 row=1 col=28 in_addr=28 w_addr=92 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2875000 state=2 row=1 col=29 in_addr=29 w_addr=93 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2885000 state=3 row=1 col=29 in_addr=29 w_addr=93 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2895000 state=4 row=1 col=29 in_addr=29 w_addr=93 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2905000 state=2 row=1 col=30 in_addr=30 w_addr=94 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2915000 state=3 row=1 col=30 in_addr=30 w_addr=94 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2925000 state=4 row=1 col=30 in_addr=30 w_addr=94 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2935000 state=2 row=1 col=31 in_addr=31 w_addr=95 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2945000 state=3 row=1 col=31 in_addr=31 w_addr=95 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2955000 state=4 row=1 col=31 in_addr=31 w_addr=95 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2965000 state=2 row=1 col=32 in_addr=32 w_addr=96 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2975000 state=3 row=1 col=32 in_addr=32 w_addr=96 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=2985000 state=4 row=1 col=32 in_addr=32 w_addr=96 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=2995000 state=2 row=1 col=33 in_addr=33 w_addr=97 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3005000 state=3 row=1 col=33 in_addr=33 w_addr=97 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3015000 state=4 row=1 col=33 in_addr=33 w_addr=97 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3025000 state=2 row=1 col=34 in_addr=34 w_addr=98 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3035000 state=3 row=1 col=34 in_addr=34 w_addr=98 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3045000 state=4 row=1 col=34 in_addr=34 w_addr=98 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3055000 state=2 row=1 col=35 in_addr=35 w_addr=99 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3065000 state=3 row=1 col=35 in_addr=35 w_addr=99 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3075000 state=4 row=1 col=35 in_addr=35 w_addr=99 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3085000 state=2 row=1 col=36 in_addr=36 w_addr=100 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3095000 state=3 row=1 col=36 in_addr=36 w_addr=100 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3105000 state=4 row=1 col=36 in_addr=36 w_addr=100 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3115000 state=2 row=1 col=37 in_addr=37 w_addr=101 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3125000 state=3 row=1 col=37 in_addr=37 w_addr=101 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3135000 state=4 row=1 col=37 in_addr=37 w_addr=101 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3145000 state=2 row=1 col=38 in_addr=38 w_addr=102 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3155000 state=3 row=1 col=38 in_addr=38 w_addr=102 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3165000 state=4 row=1 col=38 in_addr=38 w_addr=102 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3175000 state=2 row=1 col=39 in_addr=39 w_addr=103 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3185000 state=3 row=1 col=39 in_addr=39 w_addr=103 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3195000 state=4 row=1 col=39 in_addr=39 w_addr=103 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3205000 state=2 row=1 col=40 in_addr=40 w_addr=104 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3215000 state=3 row=1 col=40 in_addr=40 w_addr=104 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3225000 state=4 row=1 col=40 in_addr=40 w_addr=104 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3235000 state=2 row=1 col=41 in_addr=41 w_addr=105 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3245000 state=3 row=1 col=41 in_addr=41 w_addr=105 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3255000 state=4 row=1 col=41 in_addr=41 w_addr=105 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3265000 state=2 row=1 col=42 in_addr=42 w_addr=106 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3275000 state=3 row=1 col=42 in_addr=42 w_addr=106 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3285000 state=4 row=1 col=42 in_addr=42 w_addr=106 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3295000 state=2 row=1 col=43 in_addr=43 w_addr=107 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3305000 state=3 row=1 col=43 in_addr=43 w_addr=107 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3315000 state=4 row=1 col=43 in_addr=43 w_addr=107 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3325000 state=2 row=1 col=44 in_addr=44 w_addr=108 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3335000 state=3 row=1 col=44 in_addr=44 w_addr=108 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3345000 state=4 row=1 col=44 in_addr=44 w_addr=108 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3355000 state=2 row=1 col=45 in_addr=45 w_addr=109 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3365000 state=3 row=1 col=45 in_addr=45 w_addr=109 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3375000 state=4 row=1 col=45 in_addr=45 w_addr=109 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3385000 state=2 row=1 col=46 in_addr=46 w_addr=110 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3395000 state=3 row=1 col=46 in_addr=46 w_addr=110 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3405000 state=4 row=1 col=46 in_addr=46 w_addr=110 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3415000 state=2 row=1 col=47 in_addr=47 w_addr=111 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3425000 state=3 row=1 col=47 in_addr=47 w_addr=111 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3435000 state=4 row=1 col=47 in_addr=47 w_addr=111 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3445000 state=2 row=1 col=48 in_addr=48 w_addr=112 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3455000 state=3 row=1 col=48 in_addr=48 w_addr=112 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3465000 state=4 row=1 col=48 in_addr=48 w_addr=112 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3475000 state=2 row=1 col=49 in_addr=49 w_addr=113 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3485000 state=3 row=1 col=49 in_addr=49 w_addr=113 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3495000 state=4 row=1 col=49 in_addr=49 w_addr=113 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3505000 state=2 row=1 col=50 in_addr=50 w_addr=114 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3515000 state=3 row=1 col=50 in_addr=50 w_addr=114 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3525000 state=4 row=1 col=50 in_addr=50 w_addr=114 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3535000 state=2 row=1 col=51 in_addr=51 w_addr=115 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3545000 state=3 row=1 col=51 in_addr=51 w_addr=115 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3555000 state=4 row=1 col=51 in_addr=51 w_addr=115 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3565000 state=2 row=1 col=52 in_addr=52 w_addr=116 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3575000 state=3 row=1 col=52 in_addr=52 w_addr=116 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3585000 state=4 row=1 col=52 in_addr=52 w_addr=116 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3595000 state=2 row=1 col=53 in_addr=53 w_addr=117 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3605000 state=3 row=1 col=53 in_addr=53 w_addr=117 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3615000 state=4 row=1 col=53 in_addr=53 w_addr=117 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3625000 state=2 row=1 col=54 in_addr=54 w_addr=118 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3635000 state=3 row=1 col=54 in_addr=54 w_addr=118 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3645000 state=4 row=1 col=54 in_addr=54 w_addr=118 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3655000 state=2 row=1 col=55 in_addr=55 w_addr=119 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3665000 state=3 row=1 col=55 in_addr=55 w_addr=119 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3675000 state=4 row=1 col=55 in_addr=55 w_addr=119 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3685000 state=2 row=1 col=56 in_addr=56 w_addr=120 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3695000 state=3 row=1 col=56 in_addr=56 w_addr=120 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3705000 state=4 row=1 col=56 in_addr=56 w_addr=120 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3715000 state=2 row=1 col=57 in_addr=57 w_addr=121 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3725000 state=3 row=1 col=57 in_addr=57 w_addr=121 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3735000 state=4 row=1 col=57 in_addr=57 w_addr=121 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3745000 state=2 row=1 col=58 in_addr=58 w_addr=122 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3755000 state=3 row=1 col=58 in_addr=58 w_addr=122 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3765000 state=4 row=1 col=58 in_addr=58 w_addr=122 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3775000 state=2 row=1 col=59 in_addr=59 w_addr=123 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3785000 state=3 row=1 col=59 in_addr=59 w_addr=123 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3795000 state=4 row=1 col=59 in_addr=59 w_addr=123 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3805000 state=2 row=1 col=60 in_addr=60 w_addr=124 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3815000 state=3 row=1 col=60 in_addr=60 w_addr=124 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3825000 state=4 row=1 col=60 in_addr=60 w_addr=124 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3835000 state=2 row=1 col=61 in_addr=61 w_addr=125 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3845000 state=3 row=1 col=61 in_addr=61 w_addr=125 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3855000 state=4 row=1 col=61 in_addr=61 w_addr=125 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3865000 state=2 row=1 col=62 in_addr=62 w_addr=126 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3875000 state=3 row=1 col=62 in_addr=62 w_addr=126 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3885000 state=4 row=1 col=62 in_addr=62 w_addr=126 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3895000 state=2 row=1 col=63 in_addr=63 w_addr=127 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3905000 state=3 row=1 col=63 in_addr=63 w_addr=127 mac_clr=0 mac_en=1 out_we=0 out_addr=1 done=0
+t=3915000 state=4 row=1 col=63 in_addr=63 w_addr=127 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3925000 state=5 row=1 col=63 in_addr=63 w_addr=127 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3935000 state=6 row=1 col=63 in_addr=63 w_addr=127 mac_clr=0 mac_en=0 out_we=1 out_addr=1 done=0
+t=3945000 state=7 row=1 col=63 in_addr=63 w_addr=127 mac_clr=0 mac_en=0 out_we=0 out_addr=1 done=0
+t=3955000 state=1 row=2 col=0 in_addr=0 w_addr=128 mac_clr=1 mac_en=0 out_we=0 out_addr=2 done=0
+t=3965000 state=2 row=2 col=0 in_addr=0 w_addr=128 mac_clr=0 mac_en=0 out_we=0 out_addr=2 done=0
+t=3975000 state=3 row=2 col=0 in_addr=0 w_addr=128 mac_clr=0 mac_en=1 out_we=0 out_addr=2 done=0
+t=3985000 state=4 row=2 col=0 in_addr=0 w_addr=128 mac_clr=0 mac_en=0 out_we=0 out_addr=2 done=0
+t=3995000 state=2 row=2 col=1 in_addr=1 w_addr=129 mac_clr=0 mac_en=0 out_we=0 out_addr=2 done=0
