@@ -60,3 +60,4 @@ open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-46
 open_wave_config {C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/bram_all_tb_behav.wcfg}
 source fsm_ctrl_tb.tcl
 run 3000ns
+close_sim
