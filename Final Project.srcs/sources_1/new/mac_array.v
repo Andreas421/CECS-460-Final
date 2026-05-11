@@ -7,7 +7,7 @@ module mac_array(
     input en,
     input signed [7:0]  input_data,
     input signed [7:0]  weight_data,
-    output [31:0] acc_out
+    output signed [31:0] acc_out
     );
     
     reg signed [31:0] acc;

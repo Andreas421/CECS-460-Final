@@ -1,7 +1,10 @@
-Time resolution is 1 ps
 ------------------------------------------------------------
 Loading input vector through AXI...
 ------------------------------------------------------------
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_system_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1907.648 ; gain = 0.000
+run 5000ms
 ------------------------------------------------------------
 Loading weight matrix through AXI...
 ------------------------------------------------------------
@@ -79,4 +82,3 @@ PASS row 63: result = -9
 ------------------------------------------------------------
 SYSTEM TEST PASSED: all 64 outputs matched.
 ------------------------------------------------------------
-$finish called at time : 379225 ns : File "C:/Users/ander/OneDrive/Desktop/CECS 460/1FINALPROJECT/CECS-460-Final/Final Project.srcs/sim_1/new/top_system_tb.v" Line 277

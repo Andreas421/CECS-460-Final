@@ -1,8 +1,20 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fsm_ctrl_tb_behav xil_defaultlib.fsm_ctrl_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_system_behav xil_defaultlib.tb_top_system xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_slave
+Compiling module xil_defaultlib.fsm_ctrl
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.input_bram
+Compiling module xil_defaultlib.weight_bram
+Compiling module xil_defaultlib.output_bram
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.tb_top_system
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_system_behav

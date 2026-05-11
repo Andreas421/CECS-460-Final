@@ -8,6 +8,7 @@ module fsm_ctrl(
     input  [7:0]  weight_dout,
     input  [31:0] mac_acc_out,
     output reg done,
+    output wire busy,
     output reg output_we,
     output reg mac_clear,
     output reg mac_en,
@@ -35,6 +36,8 @@ assign input_addr  = col;
 assign weight_addr = {row, col};
 assign output_addr = row;
 assign output_din  = mac_acc_out;
+
+assign busy = (state != IDLE) && (state != S_DONE);
 
 //Sequential block for state updates
 always @(posedge clk or negedge rst_n) begin
